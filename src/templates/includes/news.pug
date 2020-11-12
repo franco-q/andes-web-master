@@ -1,0 +1,40 @@
+- 
+	var items = {
+		"table": "news",
+		"rows":
+		[
+			{
+				"title": "Polo 226",
+				"description": "www.polo226.com",
+				"detail": "Parque Logistico e Industrial. Ruta 226 Km 8.\r\n11.000 m2 de Naves con Posesión Inmediata.\r\nAquiera su unidad en Construcción en Cuotas en Pesos.",
+				"imagecatalog": "A.jpg",
+				"updated": "2019-04-02 18:59:42"
+			},
+			{
+				"title": "Residencias Olavarria",
+				"description": "Edificio Residencial con basamento Comercial en zona Guemes",
+				"detail": "Locales Comerciales, Departamentos de 1, 2 y 3 Dormitorios. Amplio Jardí­n. Cocheras Cubiertas en el corazón de Barrio Guemes.",
+				"imagecatalog": "B.jpg",
+				"updated": "2020-01-27 09:51:48"
+			},
+			{
+				"title": "COPA GOLF ICBC",
+				"description": "Edificio Residencial con basamento Comercial en zona Guemes",
+				"detail": "El servicios de financiación se proporcionan a nuestros clientes por parte de un equipo de profesionales de la industria.",
+				"imagecatalog": "C.jpg",
+				"updated": "2020-01-27 09:51:48"
+			}
+		]
+	}
+
+.news
+	.container-lg
+		h2.title ULTIMAS #[b NOVEDADES]
+		.row
+			each item in items.rows
+				.col-md-4
+					article.item
+						figure.item-img: img(src=require("@/images/" + item.imagecatalog)).mw-100
+						h4.item-title= item.title
+						p.item-text= item.detail
+						.text-right: a(href="#").item-link ver mas

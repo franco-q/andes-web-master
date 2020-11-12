@@ -1,0 +1,93 @@
+- htmlWebpackPlugin.options.appMountIds = htmlWebpackPlugin.options.appMountIds || []
+- htmlWebpackPlugin.options.lang = htmlWebpackPlugin.options.lang || "es"
+- htmlWebpackPlugin.options.links = htmlWebpackPlugin.options.links || []
+- htmlWebpackPlugin.options.meta = htmlWebpackPlugin.options.meta || []
+- htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
+doctype html
+html(lang=htmlWebpackPlugin.options.lang manifest= htmlWebpackPlugin.files.manifest || false )
+	head
+		meta(charset="utf-8")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+		if htmlWebpackPlugin.options.baseHref 
+			base(href=htmlWebpackPlugin.options.baseHref)
+
+
+		each item in Array.isArray(htmlWebpackPlugin.options.meta) ? htmlWebpackPlugin.options.meta : []
+			meta&attributes(item)
+
+
+		title= htmlWebpackPlugin.options.title
+
+		if htmlWebpackPlugin.files.favicon
+			link(href=htmlWebpackPlugin.files.favicon rel="shortcut icon")
+
+		if htmlWebpackPlugin.options.mobile
+			meta(content="width=device-width, initial-scale=1" name="viewport")
+
+		each item in htmlWebpackPlugin.options.links || []
+			link&attributes(typeof item === 'string' || item instanceof String ? { href: item, rel: 'stylesheet' } : item)
+
+		each key in htmlWebpackPlugin.files.css || []
+			if htmlWebpackPlugin.files.cssIntegrity
+				link(href=htmlWebpackPlugin.files.css[key] rel="stylesheet" integrity=htmlWebpackPlugin.files.cssIntegrity[key] crossorigin=webpackConfig.output.crossOriginLoading)
+			else
+				link(href=htmlWebpackPlugin.files.css[key] rel="stylesheet")
+
+		if htmlWebpackPlugin.options.headHtmlSnippet
+			!= htmlWebpackPlugin.options.headHtmlSnippet
+	body
+		block content
+
+		if htmlWebpackPlugin.options.unsupportedBrowser
+			style .unsupported-browser { display: none; }
+			.unsupported-browser Sorry, your browser is not supported. Please upgrade to the latest version or switch your browser to use thissite. See #[a(href="http://outdatedbrowser.com/") outdatedbrowser.com] for options.
+
+		if htmlWebpackPlugin.options.bodyHtmlSnippet
+			!= htmlWebpackPlugin.options.bodyHtmlSnippet
+
+		if htmlWebpackPlugin.options.appMountId
+			div(id=htmlWebpackPlugin.options.appMountId)
+				if htmlWebpackPlugin.options.appMountHtmlSnippet
+					!= htmlWebpackPlugin.options.appMountHtmlSnippet
+
+		each item in htmlWebpackPlugin.options.appMountIds || []
+			div(id=item)
+
+		if htmlWebpackPlugin.options.window
+			script(type="text/javascript")
+				each obj, key in htmlWebpackPlugin.options.window || []
+					| window[!{key}] = !{JSON.stringify(obj)};
+
+		if htmlWebpackPlugin.options.inlineManifestWebpackName
+			!= htmlWebpackPlugin.files[htmlWebpackPlugin.options.inlineManifestWebpackName]
+
+		each item in htmlWebpackPlugin.options.scripts || []
+			script&attributes(typeof item === 'string' || item instanceof String ? { src: item, type: 'text/javascript' } : item)
+
+		each key in htmlWebpackPlugin.files.chunks || []
+			if htmlWebpackPlugin.files.jsIntegrity
+				script(
+					src=htmlWebpackPlugin.files.chunks[key].entry 
+					type="text/javascript" 
+					integrity=htmlWebpackPlugin.files.jsIntegrity[htmlWebpackPlugin.files.js.indexOf(htmlWebpackPlugin.files.chunks[key].entry)] 
+					crossorigin=webpackConfig.output.crossOriginLoading)
+			else
+				script(src=htmlWebpackPlugin.files.chunks[key].entry type="text/javascript")
+
+		if htmlWebpackPlugin.options.devServer
+			script(src=htmlWebpackPlugin.options.devServer + '/webpack-dev-server.js' type="text/javascript")
+
+		if htmlWebpackPlugin.options.googleAnalytics
+			script(type="text/javascript")
+				| window.GoogleAnalyticsObject='ga';window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+				if htmlWebpackPlugin.options.googleAnalytics.trackingId
+					| ga('create','!{htmlWebpackPlugin.options.googleAnalytics.trackingId}','auto');
+				else 
+					| throw new Error("html-webpack-template requires googleAnalytics.trackingId config");
+				if htmlWebpackPlugin.options.googleAnalytics.pageViewOnLoad
+					| = ga('send','pageview')
+			script(async defer src="https://www.google-analytics.com/analytics.js" type="text/javascript")
+			
+			
+			

@@ -1,0 +1,68 @@
+.devs {
+	margin-top: rem(36px);
+	@include media-breakpoint-up(md) {
+		padding-bottom: rem(23px);
+		margin-top: rem(54px);
+		box-shadow: inset 0px -49.5vh 0px 0px #f1f1f1;
+	}
+	.title {
+		position: relative;
+		@include jano_light;
+		padding-left: rem(16px);
+		margin-bottom: rem(32px);
+		&:before {
+			height: rem(20px);
+			left: 0;
+			top: rem(8px);
+			content: ' ';
+			display: block;
+			position: absolute;
+			width: rem(8px);
+			background-color: #b93536;
+		}
+		b {
+			color: #b93536;
+			@include jano_black;
+		}
+	}
+	.item {
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 257px;
+		position: relative;
+		background-position: center;
+		margin-bottom: rem(12px);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(62px);
+		}
+		&-title {
+			position: absolute;
+			bottom: 17px;
+			left: 0;
+			max-width: 80%;
+			background-color: rgba(#b93536,0.8);
+			display: flex;
+			align-items: flex-end;
+			padding: rem(15px) rem(15px);
+			* {
+				color: #fff;
+				margin: 0;
+				@include jano_light;
+			}
+			h4 {
+				font-size: rem(24px);
+				line-height: rem(23px);
+				margin-right: rem(4px);
+			}
+			a {
+				display: inline-block;
+				border-left: solid rem(1px) #fff;
+				padding: 0 rem(4px);
+				white-space: nowrap;
+				font-size: rem(12px);
+				line-height: rem(11px);
+				margin-bottom: 3px;
+			}
+		}
+	}
+}

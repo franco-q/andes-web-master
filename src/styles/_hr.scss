@@ -1,0 +1,41 @@
+hr {
+	color: #fff;
+	font-size: rem(32px);
+	text-align: center;
+	line-height: 0;
+	@include media-breakpoint-up(md) {
+		&:before {
+			background-color: #b93536;
+			border-radius: 50%;
+			// color: #b93536;
+			// background-color: #F00;
+			content: '\e80a';
+			font-family: 'i';
+			font-style: normal;
+			font-weight: normal;
+			speak: never;
+
+			display: inline-block;
+			text-decoration: inherit;
+			width: rem(48px);
+			height: rem(48px);
+			position: relative;
+			top: rem(-24px);
+			/* opacity: .8; */
+
+			/* For safety - reset parent styles, that can break glyph codes*/
+			font-variant: normal;
+			text-transform: none;
+
+			/* fix buttons height, for twitter bootstrap */
+			line-height: rem(44px);
+
+			/* Font smoothing. That was taken from TWBS */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+
+			/* Uncomment for 3D effect */
+			/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+		}
+	}
+}

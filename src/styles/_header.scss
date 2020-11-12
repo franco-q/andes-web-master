@@ -1,0 +1,15 @@
+.header {
+	background-color: #f1f1f1;
+	border-top: rem(4px) solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to right, #a03738 70%, #000);
+	font-size: rem(22px);
+	padding-top: rem(44px);
+	padding-bottom: rem(24px);
+	line-height: 1;
+	@include jano_light;
+	.title{
+		margin-bottom: rem(8px);
+		font-size: rem(36px);
+	}
+}

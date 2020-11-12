@@ -1,0 +1,21 @@
+extends ../index.pug
+
+
+block content
+	include ../includes/navbar.pug
+	#slide-header
+	<div class="whatsapp-fixed">
+		img(src=require("@/images/WTP.png"))
+	</div>
+	<div class="icon-bar d-none d-lg-block"><a href="#"><i class="icon-share-1"></i></a><a href="#"><i class="icon-mail"></i></a><a href="#"><i class="icon-facebook-squared"></i></a><a href="#"><i class="icon-tw"></i></a></div>
+	<div class="container-lg">
+		<div id="filter"></div>
+	</div>
+	include ../includes/devs.pug
+	hr
+	include ../includes/props.pug
+	include ../includes/home-badges.pug
+	hr
+	include ../includes/news.pug
+	hr
+	include ../includes/footer.pug

@@ -1,0 +1,102 @@
+.props {
+	margin-top: rem(36px);
+	@include media-breakpoint-up(md) {
+		margin-top: rem(70px);
+		box-shadow: inset 0px -20.1vh 0px 0px #f1f1f1;
+	}
+	.title {
+		position: relative;
+		@include jano_light;
+		padding-left: rem(16px);
+		margin-bottom: rem(39px);
+		color: #6a6a6a;
+		&:before {
+			height: rem(20px);
+			left: 0;
+			top: rem(8px);
+			content: ' ';
+			display: block;
+			position: absolute;
+			width: rem(8px);
+			background-color: #b93536;
+		}
+		b {
+			color: #b93536;
+			@include jano_black;
+		}
+	}
+	.item {
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 288px;
+		position: relative;
+		background-position: center;
+		margin-bottom: rem(12px);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(62px);
+		}
+		&-title {
+			position: absolute;
+			left: 0;
+			background-color: rgba(#b93536, .8);
+			display: flex;
+			align-items: flex-end;
+			padding: rem(14px) rem(15px);
+			bottom: rem(44px);
+			max-width: 100%;
+
+			@include media-breakpoint-up(sm) {
+				max-width: 68%;
+				bottom: 45px;
+			}
+
+			* {
+				color: #fff;
+				margin: 0;
+			}
+			h4 {
+				font-size: rem(24px);
+				line-height: rem(23px);
+				margin-right: rem(4px);
+				@include jano_bold;
+				span {
+					@include jano_light;
+				}
+			}
+			a {
+				display: inline-block;
+				border-left: solid rem(1px) #fff;
+				padding: 0 rem(4px);
+				white-space: nowrap;
+				font-size: rem(12px);
+				line-height: rem(12px);
+			}
+		}
+		&-details {
+			background-color: #000;
+			color: #fff;
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			justify-content: space-around;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: rem(4px) 0;
+			@include media-breakpoint-down(sm) {
+				flex-wrap: wrap;
+				> * {
+					padding: 0 rem(8px);
+					width: 50%;
+				}
+			}
+		}
+		&-detail {
+			display: block;
+			white-space: nowrap;
+			font-size: rem(12px);
+		}
+	}
+}

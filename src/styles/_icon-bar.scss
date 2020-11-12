@@ -1,0 +1,18 @@
+.icon-bar {
+	// position: fixed;
+	// top: 100%;
+	right: 0;
+	position: absolute;
+	z-index: 9;
+	
+	a{
+		color: #959595;
+		font-size: rem(28px);
+		line-height: rem(28px);
+		padding: rem(4px);
+		display: block;
+		&:hover {
+			color: #434343;
+		}
+	}
+}

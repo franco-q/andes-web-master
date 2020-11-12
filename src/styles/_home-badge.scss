@@ -1,0 +1,42 @@
+.home-badge {
+	text-align: center;
+	margin:0 rem(39px) rem(16px) rem(39px);
+	&-title {
+		@include jano_bold;
+
+		font-size: rem(35px);
+		line-height: rem(35px);
+		margin: rem(10px) 0 0 0;
+		display: block;
+		color: #b93536;
+		&:first-letter {
+			color: #000;
+		}
+	}
+
+	small {
+		font-size: rem(12px);
+		line-height: rem(12px);
+		@include jano_medium;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin: 0 rem(15px);
+	}
+	@include media-breakpoint-up(xl) {
+		margin: 0 rem(32px);
+		&-title {
+			// font-size: rem(51.2px);
+			// line-height: rem(51.2px);
+		}
+		small {
+			font-size: rem(16px);
+			line-height: rem(16px);
+			@include jano_medium;
+		}
+	}
+}
+.home-badges {
+	margin-top: rem(83px);
+	margin-bottom: rem(73px);
+}

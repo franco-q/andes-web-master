@@ -1,0 +1,127 @@
+extends ../index.pug
+
+
+block content
+    include ../includes/navbar.pug
+    #slide-header
+    .sheet
+        header.sheet-header
+            .container-xl
+                .row
+                    .col-md-8
+                        h1.sheet-title VISTA AL MAR Y AL GOLF - PLAYA GRANDE
+                        div.d-sm-flex.mb-2
+                            address.sheet-address #[i.icon-location] Formosa 150, Mar del Plata
+                            span.sheet-ref LOTE EN VENTA #[strong REF# 428482]  
+                    .col-md-4
+                        span.sheet-price USD 890.000
+
+        .container-xl.mt-n3
+            .row
+                .col-md-8
+                    .sheet-carousel
+                        - var images = [{"original":"https://cdn-thumbnailer-properties.inmokey.com/p/w1920/us-east-1/1/2/p-590712-031120030039-388223.jpeg?v=3","small":"https://cdn-thumbnailer-properties.inmokey.com/p/w100/us-east-1/1/2/p-590712-031120030039-388223.jpeg?v=3","medium":"https://cdn-thumbnailer-properties.inmokey.com/p/w500/us-east-1/1/2/p-590712-031120030039-388223.jpeg?v=3","big":"https://cdn-thumbnailer-properties.inmokey.com/p/w1000/us-east-1/1/2/p-590712-031120030039-388223.jpeg?v=3","description":""},{"original":"https://cdn-thumbnailer-properties.inmokey.com/p/w1920/us-east-1/1/2/p-590712-031120031549-664376.jpeg?v=3","small":"https://cdn-thumbnailer-properties.inmokey.com/p/w100/us-east-1/1/2/p-590712-031120031549-664376.jpeg?v=3","medium":"https://cdn-thumbnailer-properties.inmokey.com/p/w500/us-east-1/1/2/p-590712-031120031549-664376.jpeg?v=3","big":"https://cdn-thumbnailer-properties.inmokey.com/p/w1000/us-east-1/1/2/p-590712-031120031549-664376.jpeg?v=3","description":""},{"original":"https://cdn-thumbnailer-properties.inmokey.com/p/w1920/us-east-1/1/2/p-590712-031120030039-985491.jpeg?v=3","small":"https://cdn-thumbnailer-properties.inmokey.com/p/w100/us-east-1/1/2/p-590712-031120030039-985491.jpeg?v=3","medium":"https://cdn-thumbnailer-properties.inmokey.com/p/w500/us-east-1/1/2/p-590712-031120030039-985491.jpeg?v=3","big":"https://cdn-thumbnailer-properties.inmokey.com/p/w1000/us-east-1/1/2/p-590712-031120030039-985491.jpeg?v=3","description":""},{"original":"https://cdn-thumbnailer-properties.inmokey.com/p/w1920/us-east-1/1/2/p-590712-031120030037-263948.jpeg?v=3","small":"https://cdn-thumbnailer-properties.inmokey.com/p/w100/us-east-1/1/2/p-590712-031120030037-263948.jpeg?v=3","medium":"https://cdn-thumbnailer-properties.inmokey.com/p/w500/us-east-1/1/2/p-590712-031120030037-263948.jpeg?v=3","big":"https://cdn-thumbnailer-properties.inmokey.com/p/w1000/us-east-1/1/2/p-590712-031120030037-263948.jpeg?v=3","description":""}];
+                        #sheet-carousel.sheet-carousel-main.carousel.slide(data-ride='sheet-carousel')
+                            .carousel-inner
+                                each src_, i in images
+                                    .carousel-item(class=(i == 0 ? "active" : ""))
+                                        .embed-responsive.embed-responsive-16by9( style="background-image: url(" + src_.original + ")")
+
+                            .carousel-control-prev 
+                                a(href="#sheet-carousel" role="button" data-slide="prev")
+                                    span.icon-angle-left
+
+                            .carousel-control-next 
+                                a(href="#sheet-carousel" role="button" data-slide="next")
+                                    span.icon-angle-right
+
+                        .sheet-carousel-thumb.carousel.slide(data-interval='false')
+                            .carousel-inner
+                                .carousel-item.active
+                                    .row
+                                        each src_, i in images
+                                            .col-md-3.thumb(data-target='#sheet-carousel' data-slide-to=i)
+                                                .embed-responsive.embed-responsive-16by9( style="background-image: url(" + src_.medium + ")")
+                    .sheet-share
+                        span.sheet-share-it COMPARTIR
+                        .d-flex
+                            a(href="#").sheet-share-btn
+                                .icon-facebook-squared Facebook
+                            a(href="#").sheet-share-btn
+                                .icon-tw Twitter
+                            a(href="#").sheet-share-btn
+                                .icon-wa WhatsApp
+                    .sheet-features
+                        .sheet-feature
+                            i.icon-home 
+                            div #[strong 2] Ambientes
+                        .sheet-feature
+                            i.icon-bed 
+                            div #[strong 1] Dorm
+                        .sheet-feature
+                            i.icon-droplet 
+                            div #[strong 2] Baños
+                        .sheet-feature 
+                            i.icon-codeopen 
+                            div #[strong 54] m² Cub
+                .col-md-4
+                    .sheet-form
+                        h3.sheet-form-title ESPATOLERO Y LORENZO
+                        span.sheet-form-tel 0223 493-8863
+                        .form-group
+                            input.sheet-input(placeholder="SU NOMBRE")
+                        .form-group
+                            input.sheet-input(placeholder="EMAIL")
+                        .form-group
+                            input.sheet-input(placeholder="TELEFONO")
+                        .form-group
+                            textarea(name="" rows="5").sheet-input Estoy interesado en la propiedad 
+                        .form-group
+                            button.sheet-submit ENVIAR POR MAIL
+                        .form-group.m-0
+                            button.sheet-submit-wa CONSULTE POR WHATSAPP
+                .col-12.mt-3
+                    h3.sheet-subtitle DESCRIPCIÓN
+                    .sheet-desc
+                        p.sheet-desc-content 
+                            | Excelente departamento de 4 ambientes, en edificio de gran categoría, con vista al mar y al golf. Muy luminoso.
+                            | Living-comedor muy amplio y excelentes visuales. Cocina con isla central, horno y anafe eléctricos y una segunda anafe de dos hornallas a gas. Mesada de Silestone. Espacio en bajo-mesada para lavavajillas y lavadero separado.
+                            | 3 dormitorios con placares completos (principal en suite con baño compartimentado, hidromasaje y sauna).
+                            | 3 baños.
+                            | Calefacción por radiadores y Aire frío/calor en todos los ambientes.
+                            | Carpinterías en DVH.
+                            | Todo reciclado a nuevo.
+                            | Dos cocheras cubiertas amplias (entran tres autos).
+                            | El edificio cuenta son seguridad.
+                    h3.sheet-subtitle DETALLES ADICIONALES
+                    .sheet-details.row
+                        .col-sm-6.mb-2
+                            .sheet-detail
+                                strong.sheet-detail-title REFERENCIA #
+                                strong.sheet-detail-val 428482
+                        .col-sm-6.mb-2
+                            .sheet-detail
+                                strong.sheet-detail-title AMB
+                                strong.sheet-detail-val 4
+                        .col-sm-6.mb-2
+                            .sheet-detail
+                                strong.sheet-detail-title REFERENCIA #
+                                strong.sheet-detail-val 428482
+                        .col-sm-6.mb-2
+                            .sheet-detail
+                                strong.sheet-detail-title AMB
+                                strong.sheet-detail-val 4
+                        .col-sm-6.mb-2
+                            .sheet-detail
+                                strong.sheet-detail-title REFERENCIA #
+                                strong.sheet-detail-val 428482
+                        .col-sm-6.mb-2
+                            .sheet-detail
+                                strong.sheet-detail-title AMB
+                                strong.sheet-detail-val 4
+                    h3.sheet-subtitle UBICACIÓN
+                    .sheet-ubication
+                        .sheet-map
+                            iframe(width="100%" height="450" src="https://maps.google.com/maps?width=100%&height=450&hl=es&z=13&t=&q=loc:-37.998759,-57.554863&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0")
+
+    include ../includes/footer.pug

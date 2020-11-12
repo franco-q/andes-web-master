@@ -1,0 +1,239 @@
+.sheet {
+	&-header {
+		background-color: #f1f1f1;
+		border-top: rem(4px) solid;
+		border-image-slice: 1;
+		border-image-source: linear-gradient(to right, #a03738 70%, #000);
+		font-size: rem(22px);
+		padding-top: rem(44px);
+		padding-bottom: rem(24px);
+		line-height: 1;
+	}
+
+	&-title {
+		margin-bottom: rem(8px);
+		font-size: rem(31px);
+		position: relative;
+		padding-left: 1rem;
+		@include jano_bold;
+		&:before {
+			height: rem(20px);
+			left: 0;
+			top: rem(8px);
+			content: ' ';
+			display: block;
+			position: absolute;
+			width: rem(8px);
+			background-color: #b93536;
+		}
+	}
+
+	&-subtitle {
+		margin-bottom: rem(8px);
+		font-size: rem(28px);
+		position: relative;
+		padding-left: 1rem;
+		@include jano_bold;
+		&:before {
+			height: rem(20px);
+			left: 0;
+			top: rem(8px);
+			content: ' ';
+			display: block;
+			position: absolute;
+			width: rem(8px);
+			background-color: #b93536;
+		}
+	}
+
+	&-address {
+		color: #747474;
+		margin-bottom: 0;
+	}
+
+	&-ref {
+		color: #000;
+		margin-left: rem(12px);
+		strong {
+			font-size: rem(21px);
+			@include jano_bold;
+			color: #a03738;
+		}
+	}
+
+	&-carousel {
+		margin-bottom: rem(12px);
+		.embed-responsive {
+			background-size: cover;
+			background-position: center;
+		}
+		.carousel-control-next {
+			right: -30px !important;
+		}
+		.carousel-control-prev {
+			left: -30px !important;
+		}
+		.carousel-control-prev,
+		.carousel-control-next {
+			width: 30px !important;
+			* {
+				font-size: 2rem;
+				color: #b93536 !important;
+			}
+		}
+		&-main {
+			margin-bottom: rem(12px);
+		}
+		&-thumb {
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
+
+	&-price {
+		margin-bottom: rem(8px);
+		font-size: rem(31px);
+		position: relative;
+		padding-left: 1rem;
+		@include jano_bold;
+		&:before {
+			height: rem(20px);
+			left: 0;
+			top: rem(8px);
+			content: ' ';
+			display: block;
+			position: absolute;
+			width: rem(8px);
+			background-color: #b93536;
+		}
+	}
+
+	&-form {
+		border: solid 1px #d1d1d1;
+		line-height: 1;
+		background-color: #fff;
+		padding: rem(34px * 0.5) rem(40px * 0.5);
+		@include media-breakpoint-up(lg) {
+			padding: rem(34px) rem(40px);
+		}
+		&-title {
+			@include jano_bold;
+			margin-bottom: rem(2px);
+			font-size: rem(16px);
+		}
+		&-tel {
+			@include jano_regular;
+			font-size: rem(14px);
+			display: inline-block;
+			margin-bottom: rem(8px);
+			color: #b93536;
+		}
+	}
+
+	&-input {
+		border: 0;
+		background-color: #efefef;
+		display: block;
+		padding: rem(8px) rem(10px);
+		width: 100%;
+		resize: none;
+	}
+
+	&-submit,
+	&-submit-wa {
+		@include jano_medium;
+		display: block;
+		border: 0;
+		padding: rem(14px) rem(10px);
+		width: 100%;
+		font-size: rem(14px);
+		color: #fff;
+	}
+	&-submit {
+		background-color: #b93536;
+	}
+	&-submit-wa {
+		background-color: #25d366;
+	}
+
+	&-desc {
+		color: #747474;
+		@include jano_regular;
+		line-height: 1.3;
+		white-space: pre-line;
+	}
+
+	&-details {
+		margin-bottom: 1rem;
+	}
+
+	&-detail {
+		background-color: #f1f1f1;
+		display: flex;
+		@include jano_regular;
+		padding: rem(12px);
+		justify-content: space-between;
+		font-size: rem(14px);
+		&-title {
+			color: #b93536;
+		}
+		&-val {
+			color: #696969;
+		}
+	}
+
+	&-features {
+		display: flex;
+		text-align: center;
+		justify-content: space-between;
+		margin-left: rem(-8px);
+		margin-right: rem(-8px);
+		padding: rem(16px) 0;
+	}
+
+	&-feature {
+		padding-left: rem(12px);
+		padding-right: rem(12px);
+		*[class^='icon-'] {
+			font-size: rem(20px);
+			color: #c6c6c6;
+		}
+		strong {
+			color: #b93536;
+		}
+	}
+
+	&-share {
+		border-bottom: 1px solid #e9e9e9;
+		margin-top: rem(12px);
+		&-btn,
+		&-it {
+			@include jano_light;
+			font-size: rem(18px);
+			display: block;
+			line-height: rem(30px);
+			padding: rem(10px) rem(5px);
+			text-align: center;
+		}
+		&-it {
+			background-color: #b93536;
+			color: #fff;
+			width: 100%;
+		}
+		&-btn {
+			color: #696969;
+			white-space: nowrap;
+		}
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-wrap: nowrap;
+			margin-top: rem(16px);
+			padding-bottom: rem(16px);
+			&-it {
+				width: 150px;
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+@mixin jano_thin {
+  font-family: "Jano Sans Pro";
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin jano_thinitalic {
+  font-family: "Jano Sans Pro";
+  font-weight: 100;
+  font-style: italic;
+}
+
+@mixin jano_extralight {
+  font-family: "Jano Sans Pro";
+  font-weight: 200;
+  font-style: normal;
+}
+
+@mixin jano_extralightitalic {
+  font-family: "Jano Sans Pro";
+  font-weight: 200;
+  font-style: italic;
+}
+
+@mixin jano_light {
+  font-family: "Jano Sans Pro";
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin jano_lightitalic {
+  font-family: "Jano Sans Pro";
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin jano_regular {
+  font-family: "Jano Sans Pro";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin jano_regularitalic {
+  font-family: "Jano Sans Pro";
+  font-weight: normal;
+  font-style: italic;
+}
+
+@mixin jano_medium {
+  font-family: "Jano Sans Pro";
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin jano_mediumitalic {
+  font-family: "Jano Sans Pro";
+  font-weight: 500;
+  font-style: italic;
+}
+
+@mixin jano_semibold {
+  font-family: "Jano Sans Pro";
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin jano_semibolditalic {
+  font-family: "Jano Sans Pro";
+  font-weight: 600;
+  font-style: italic;
+}
+
+@mixin jano_bold {
+  font-family: "Jano Sans Pro";
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin jano_bolditalic {
+  font-family: "Jano Sans Pro";
+  font-weight: bold;
+  font-style: italic;
+}
+
+@mixin jano_extrabold {
+  font-family: "Jano Sans Pro";
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin jano_extrabolditalic {
+  font-family: "Jano Sans Pro";
+  font-weight: 800;
+  font-style: italic;
+}
+
+@mixin jano_black {
+  font-family: "Jano Sans Pro";
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin jano_blackitalic {
+  font-family: "Jano Sans Pro";
+  font-weight: 900;
+  font-style: italic;
+}
