@@ -1,0 +1,72 @@
+extends ../index.pug
+
+
+block content
+	include ../includes/navbar.pug
+	#slide-header
+	.us
+		header.us-header
+			.container-xl
+				h2.us-header-title NOSOTROS
+		.container-xl.mb-3
+			.row
+				.col-lg-4.col-12
+					.us-info.us-info_market
+						div #[small +] #[strong 30]
+						p #[span AÑOS EN] #[br] #[span.us-info-red EL MERCADO]
+				.col-lg-4.col-12
+					.us-info.us-info_devs
+						div #[strong 25]
+						p #[span DESARROLLOS] #[br] #[span.us-info-red ENTRGADOS]
+				.col-lg-4.col-12
+					.us-info.us-info_builds
+						div #[strong 4]
+						p #[span EDIFICIOS #[br] EN CONSTRUCCION]
+			.us-intro
+				p Somos una compañía dedicada al rubro inmobiliario desde hace más de 20 años. Entendiendo que las decisiones inmobiliarias son de trascendencia para nuestros clientes, tenemos por misión ser referentes del mercado inmobiliario brindando asesoramiento especializado.
+			.row
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_1.png'))
+						h3.us-item-title EZEQUIEL LORENZO
+						p.us-item-txt CPN/Magister en Desarrollos #[br] Inmobiliarios  #[br] UB/Politécnico di Torino
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_2.png'))
+						h3.us-item-title NÉSTOR H. LORENZO
+						p.us-item-txt CPN/Magister en Desarrollos #[br] Inmobiliarios  #[br] UB/Politécnico di Torino
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_3.png'))
+						h3.us-item-title MARTIN ESPATOLERO
+						p.us-item-txt Contador Publico Nacional #[br] Magister en Desarrollos #[br] Inmobiliarios
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_4.png'))
+						h3.us-item-title HORACIO H. ESPATOLERO
+						p.us-item-txt Directorio
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_1.png'))
+						h3.us-item-title EZEQUIEL LORENZO
+						p.us-item-txt CPN/Magister en Desarrollos #[br] Inmobiliarios  #[br] UB/Politécnico di Torino
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_2.png'))
+						h3.us-item-title NÉSTOR H. LORENZO
+						p.us-item-txt CPN/Magister en Desarrollos #[br] Inmobiliarios  #[br] UB/Politécnico di Torino
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_3.png'))
+						h3.us-item-title MARTIN ESPATOLERO
+						p.us-item-txt Contador Publico Nacional #[br] Magister en Desarrollos #[br] Inmobiliarios
+				.col-sm-6.col-lg-3.col-12.us-item
+						.us-item-figure
+							img(src=require('@/images/us_4.png'))
+						h3.us-item-title HORACIO H. ESPATOLERO
+						p.us-item-txt Directorio
+
+				
+
+	hr
+	include ../includes/footer.pug

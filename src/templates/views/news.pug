@@ -30,8 +30,45 @@ block content
 			.container-xl
 				h3.post-more-title VER MAS NOTAS
 				#post-carousel.post-carousel-main.carousel.slide(data-ride='post-carousel')
+					<ol class="carousel-indicators">
+						<li data-target="#post-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#post-carousel" data-slide-to="1"></li>
+						<li data-target="#post-carousel" data-slide-to="2"></li>
+					</ol>
 					.carousel-inner
 						.carousel-item.active
+							.row
+								.col-md-4
+									a(href="#").post-carousel-item
+										.post-carousel-item-img.embed-responsive.embed-responsive-21by9(style="background-image: url(" + require("@/images/05.jpg") + ")")
+										h4.post-carousel-item-title Residencias Roque Suárez frente a Playa Varese.
+
+								.col-md-4
+									a(href="#").post-carousel-item
+										.post-carousel-item-img.embed-responsive.embed-responsive-21by9(style="background-image: url(" + require("@/images/03.jpg") + ")")
+										h4.post-carousel-item-title Descubrí Unzué Trust. Edificio en Torre frente al Mar.
+
+								.col-md-4
+									a(href="#").post-carousel-item
+										.post-carousel-item-img.embed-responsive.embed-responsive-21by9(style="background-image: url(" + require("@/images/04.jpg") + ")")
+										h4.post-carousel-item-title Casonas del Haras cerca de la ciudad yla  naturaleza.
+						.carousel-item
+							.row
+								.col-md-4
+									a(href="#").post-carousel-item
+										.post-carousel-item-img.embed-responsive.embed-responsive-21by9(style="background-image: url(" + require("@/images/05.jpg") + ")")
+										h4.post-carousel-item-title Residencias Roque Suárez frente a Playa Varese.
+
+								.col-md-4
+									a(href="#").post-carousel-item
+										.post-carousel-item-img.embed-responsive.embed-responsive-21by9(style="background-image: url(" + require("@/images/03.jpg") + ")")
+										h4.post-carousel-item-title Descubrí Unzué Trust. Edificio en Torre frente al Mar.
+
+								.col-md-4
+									a(href="#").post-carousel-item
+										.post-carousel-item-img.embed-responsive.embed-responsive-21by9(style="background-image: url(" + require("@/images/04.jpg") + ")")
+										h4.post-carousel-item-title Casonas del Haras cerca de la ciudad yla  naturaleza.
+						.carousel-item
 							.row
 								.col-md-4
 									a(href="#").post-carousel-item

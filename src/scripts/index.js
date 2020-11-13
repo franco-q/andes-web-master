@@ -18,6 +18,10 @@ import Carousel from './carousel'
 import enquire from 'enquire.js'
 
 gsap.registerPlugin(ScrollTrigger)
+gsap.config({
+    nullTargetWarn: false
+})
+
 Vue.use(VueRouter)
 
 const instances = [
@@ -35,7 +39,11 @@ instances.map(config => {
 $(window).on('load', function() {
 	'use strict'
 	let offcanvas_collapse = document.querySelector('.offcanvas-collapse')
-	let navbar_wrap_animation = gsap.fromTo('.navbar-wrap', { opacity: 0, y: -200 }, { opacity: 1, y: 0, duration: 0.7, delay: 0.5, paused: true })
+	let navbar_wrap_animation = gsap.fromTo(
+		'#home-navbar .navbar-wrap',
+		{ opacity: 0, y: -200 },
+		{ opacity: 1, y: 0, duration: 0.7, delay: 0.5, paused: true }
+	)
 	let offcanvas_collapse_animation, nav_item_animation
 
 	navbar_wrap_animation.play()

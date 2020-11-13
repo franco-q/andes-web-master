@@ -125,8 +125,8 @@
 	&-content {
 		font-size: rem(18px);
 		@include jano_light;
-        color: #434343;
-        margin-bottom: rem(50px);
+		color: #434343;
+		margin-bottom: rem(50px);
 	}
 	&-more {
 		background-color: #f1f1f1;
@@ -152,18 +152,32 @@
 		}
 	}
 	&-carousel {
+		&-main {
+			margin-bottom: rem(30px);
+			.carousel-indicators {
+				bottom: -40px;
+				li {
+                    background-color: #939393;
+                    opacity: 1;
+                    border-radius: 50%;
+                    &.active{
+                        background-color: #b93536;
+                    }
+				}
+			}
+		}
 		&-item {
 			display: block;
 			margin-bottom: rem(20px);
 			&,
 			&:hover {
-                text-decoration: none;
+				text-decoration: none;
 			}
-            &:hover &-img {
-                &:before {
-                    opacity: 1;
-                }
-            }
+			&:hover &-img {
+				&:before {
+					opacity: 1;
+				}
+			}
 			&-img {
 				background-size: cover;
 				margin-bottom: rem(12px);
@@ -173,8 +187,8 @@
 					background-image: url(../images/next.png);
 					background-repeat: no-repeat;
 					background-position: center;
-                    opacity: 0;
-                    transition: all .2s ease-in-out;
+					opacity: 0;
+					transition: all 0.2s ease-in-out;
 				}
 			}
 			&-title {

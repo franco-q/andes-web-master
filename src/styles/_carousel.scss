@@ -34,6 +34,11 @@
                 border-width: 25px 0px 0px 30px;
             }
         }
+        @include media-breakpoint-up(lg) {
+            &:after {
+                left: 10%;
+            }
+        }
         &-item {
             position: relative;
             &-title {
