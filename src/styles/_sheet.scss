@@ -121,11 +121,11 @@
 		&-title {
 			@include jano_bold;
 			margin-bottom: rem(2px);
-			font-size: rem(16px);
+			font-size: rem(20px);
 		}
 		&-tel {
 			@include jano_regular;
-			font-size: rem(14px);
+			font-size: rem(18px);
 			display: inline-block;
 			margin-bottom: rem(8px);
 			color: #b93536;
@@ -187,7 +187,6 @@
 	&-features {
 		display: flex;
 		text-align: center;
-		justify-content: space-between;
 		margin-left: rem(-8px);
 		margin-right: rem(-8px);
 		padding: rem(16px) 0;

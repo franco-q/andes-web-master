@@ -43,16 +43,17 @@
 		}
 		&-text,
 		&-link {
-			color: #585858;
-			font-size: rem(14px);
+            font-size: rem(14px);
 			line-height: 1.37;
 		}
 		&-text {
+            color: #585858;
 			padding: 0 rem(24px);
 			margin: 0;
 			@include jano_regular;
 		}
 		&-link {
+            color: #b93536;
 			margin-right: 45px;
 			@include jano_medium;
 		}
@@ -184,7 +185,8 @@
 				position: relative;
 				&:before {
 					background-color: rgba(#a03738, 0.7);
-					background-image: url(../images/next.png);
+                    background-image: url(../images/next.png);
+                    background-size: 35px;
 					background-repeat: no-repeat;
 					background-position: center;
 					opacity: 0;

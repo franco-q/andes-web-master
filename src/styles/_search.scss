@@ -53,7 +53,7 @@
 			justify-content: space-around;
 			padding-top: rem(4px);
 			padding-bottom: rem(4px);
-			*[class^="icon-"] {
+			*[class^='icon-'] {
 				color: #b93536;
 			}
 		}
@@ -157,15 +157,15 @@
 			padding: 0;
 			background-color: #ededed;
 			justify-content: space-around;
-			padding-top: rem(4px);
-			padding-bottom: rem(4px);
+			padding-top: rem(8px);
+			padding-bottom: rem(8px);
 			margin-top: auto;
-			*[class^="icon-"] {
+			*[class^='icon-'] {
 				color: #b93536;
 			}
 		}
-		
-		&-desc{
+
+		&-desc {
 			margin-top: auto;
 			margin-bottom: 0;
 			@include jano_regular;
@@ -248,7 +248,7 @@
 			height: rem(20px);
 			left: 0;
 			top: rem(8px);
-			content: " ";
+			content: ' ';
 			display: block;
 			position: absolute;
 			width: rem(8px);
@@ -303,9 +303,9 @@
 				padding: 0;
 				background-color: #ededed;
 				justify-content: space-around;
-				padding-top: rem(4px);
-				padding-bottom: rem(4px);
-				*[class^="icon-"] {
+				padding-top: rem(8px);
+				padding-bottom: rem(8px);
+				*[class^='icon-'] {
 					color: #b93536;
 				}
 			}

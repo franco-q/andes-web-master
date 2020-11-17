@@ -14,7 +14,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-8 pl-1 d-flex flex-column">
+			<div class="col-8 d-flex flex-column">
 				<h4 class="item-title">{{ item.title }}</h4>
 				<address class="item-address">
 					<i class="icon-location"></i> {{ item.address }} {{ item.address_number }}, {{ item.city.name }}

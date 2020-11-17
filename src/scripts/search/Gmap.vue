@@ -1,5 +1,5 @@
 <template>
-	<div class="flex-fill mt-2">
+	<div class="flex-fill my-2">
 		<div class="h-100" ref="googleMap"></div>
 	</div>
 </template>
