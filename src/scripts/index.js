@@ -19,7 +19,7 @@ import enquire from 'enquire.js'
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.config({
-    nullTargetWarn: false
+	nullTargetWarn: false
 })
 
 Vue.use(VueRouter)
@@ -95,6 +95,20 @@ $(window).on('load', function() {
 				.removeClass('is-active')
 		})
 
+	var $tilt = $('.tilt')
+
+	gsap.set($tilt, { transformStyle: 'preserve-3d' })
+
+	$tilt.on('mousemove', e => {
+		var sxPos = (e.offsetX / e.target.offsetWidth) * 100
+		var syPos = (e.offsetY / e.target.offsetHeight) * 100
+		gsap.to(e.currentTarget.children[0], 0.5, {
+            rotationY: 0.15 * sxPos, rotationX: 0.10 * syPos, rotationZ: 0.10,
+			transformPerspective: 500,
+			transformOrigin: 'center center'
+		})
+	})
+
 	gsap.to(document.body, {
 		opacity: 1,
 		duration: 0.7
@@ -147,8 +161,9 @@ $(window).on('load', function() {
 	gsap.from('.home-badge', {
 		scrollTrigger: {
 			trigger: '.home-badges',
-			start: 'center center',
-			end: 'bottom center'
+			start: 'center 80%',
+			markers: true,
+			end: 'center 80%'
 		},
 		opacity: 0,
 		scale: 0,
