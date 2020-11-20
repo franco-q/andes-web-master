@@ -162,7 +162,6 @@ $(window).on('load', function() {
 		scrollTrigger: {
 			trigger: '.home-badges',
 			start: 'center 80%',
-			markers: true,
 			end: 'center 80%'
 		},
 		opacity: 0,
