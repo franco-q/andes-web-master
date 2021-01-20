@@ -8,8 +8,36 @@
 	padding-bottom: rem(24px);
 	line-height: 1.2;
 	@include jano_extralight;
-	.title{
+	.title {
 		margin-bottom: rem(8px);
 		font-size: rem(36px);
+	}
+}
+.header-banner {
+	display: block;
+	height: 321px;
+	border: 0;
+	border-bottom: rem(4px) solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to right, #a03738 70%, #000);
+	position: relative;
+	overflow: hidden;
+	img {
+		height: 321px;
+		transform: translateX(-50%);
+		position: relative;
+		left: 50%;
+		width: auto;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: 20%;
+		border-color: #a03738 #00000000 #00000000 #00000000;
+		border-style: solid;
+		border-width: 25px 0px 0px 30px;
 	}
 }
